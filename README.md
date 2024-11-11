@@ -35,19 +35,22 @@ Make sure you have the following installed:
 ---
 
 ## API usage
+### Backend API Endpoints
 
-Backend API Endpoints
-GET /api/todotasks - Retrieve all tasks
-POST /api/todotasks - Create a new task
-GET /api/todotasks/{id} - Retrieve a task by ID
-PUT /api/todotasks/{id} - Update a task by ID
-DELETE /api/todotasks/{id} - Delete a task by ID
-GET /api/todotasks/pending - Retrieve all pending tasks
-GET /api/todotasks/completed - Retrieve all completed tasks
-GET /api/todotasks/overdue - Retrieve all overdue tasks
+- **GET** `/api/todotasks` - Retrieve all tasks
+- **POST** `/api/todotasks` - Create a new task
+- **GET** `/api/todotasks/{id}` - Retrieve a task by ID
+- **PUT** `/api/todotasks/{id}` - Update a task by ID
+- **DELETE** `/api/todotasks/{id}` - Delete a task by ID
+- **GET** `/api/todotasks/pending` - Retrieve all pending tasks
+- **GET** `/api/todotasks/completed` - Retrieve all completed tasks
+- **GET** `/api/todotasks/overdue` - Retrieve all overdue tasks
 
-Frontend
-Access the frontend UI at http://localhost:3000.
+---
+
+### Frontend
+
+Access the frontend UI at [http://localhost:3000](http://localhost:3000).  
 View, create, edit, and delete tasks using a simple and intuitive interface.
 
 ---
