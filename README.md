@@ -10,7 +10,6 @@ Welcome to **Taskeroni**, the task management system that’s as fun as a bowl o
 - **Task Status Tracking**: Mark tasks as pending, completed, or overdue.
 - **Simple REST API**: Powered by ASP.NET and Docker, so you can run it anywhere.
 - **Responsive Frontend**: Built with React for smooth user experience.
-- **In-memory Database** (for easy testing) or use Docker with PostgreSQL.
 
 ---
 
@@ -35,6 +34,24 @@ Make sure you have the following installed:
 
 ---
 
+## API usage
+
+Backend API Endpoints
+GET /api/todotasks - Retrieve all tasks
+POST /api/todotasks - Create a new task
+GET /api/todotasks/{id} - Retrieve a task by ID
+PUT /api/todotasks/{id} - Update a task by ID
+DELETE /api/todotasks/{id} - Delete a task by ID
+GET /api/todotasks/pending - Retrieve all pending tasks
+GET /api/todotasks/completed - Retrieve all completed tasks
+GET /api/todotasks/overdue - Retrieve all overdue tasks
+
+Frontend
+Access the frontend UI at http://localhost:3000.
+View, create, edit, and delete tasks using a simple and intuitive interface.
+
+---
+
 ### Setup Instructions
 
 1. **Clone the repository**:
@@ -53,8 +70,6 @@ Make sure you have the following installed:
   Launch the backend API on http://localhost:5001 (or the configured port in docker-compose.yml).
   Use PostgreSQL as the database for storing tasks.
 
-6. **The frontend will be accessible at http://localhost:3000.
-
-7. **To stop the containers, run:
+5. **TTo stop the containers, run:
   ```bash
   docker-compose down
