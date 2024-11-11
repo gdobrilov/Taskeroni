@@ -65,11 +65,11 @@ View, create, edit, and delete tasks using a simple and intuitive interface.
    ```bash
    docker-compose up --build
 
-4. **This setup will:
+4. **This setup will**:
 
   Launch the backend API on http://localhost:5001 (or the configured port in docker-compose.yml).
   Use PostgreSQL as the database for storing tasks.
 
-5. **TTo stop the containers, run:
+5. **To stop the containers, run**:
   ```bash
   docker-compose down
