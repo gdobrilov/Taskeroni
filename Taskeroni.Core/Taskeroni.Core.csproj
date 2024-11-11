@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Entities\" />
+    <None Remove="Specifications\" />
+    <None Remove="Factories\" />
+    <None Remove="Interfaces\" />
+    <None Remove="Specifications\Interfaces\" />
+    <None Remove="Factories\Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Specifications\" />
+    <Folder Include="Factories\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Specifications\Interfaces\" />
+    <Folder Include="Factories\Interfaces\" />
+  </ItemGroup>
+</Project>

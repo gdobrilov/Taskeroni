@@ -1,0 +1,44 @@
+﻿# Ignore build output
+bin/
+obj/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Visual Studio Code files
+.vscode/
+
+# Rider and ReSharper
+.idea/
+*.sln.iml
+
+# ASP.NET temporary files
+*.vs/
+
+# Ignore environment files
+*.env
+.env
+
+# Logs
+*.log
+logs/
+
+# NuGet packages
+*.nupkg
+packages/
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# IDE-specific and unnecessary files
+.vscode/
+.vscode-test/
+
+# Resharper
+_ReSharper*/

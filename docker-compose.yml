@@ -1,0 +1,47 @@
+﻿services:
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=taskeroni_db
+    ports:
+      - "5432:5432"
+    networks:
+      - taskeroni-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+    user: root
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+    ports:
+      - "5001:5000"
+    networks:
+      - taskeroni-network
+
+  frontend:
+    build:
+      context: ./taskeroni-frontend
+    container_name: taskeroni-frontend
+    environment:
+      - REACT_APP_API_URL=http://api:5000/api/todotasks
+    ports:
+      - "3000:80"
+    depends_on:
+      - api
+    networks:
+      - taskeroni-network
+networks:
+  taskeroni-network:
+    driver: bridge

@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.App {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 80%;
+    margin-right: 10px;
+}
+
+button {
+    padding: 8px 12px;
+}
+
+s {
+    color: gray;
+}
